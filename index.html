@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        .contener {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: green;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+
+        .d22 {
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0%;
+            top: 0%;
+            translate: -100% -70%;
+            transition: .1s;
+            border-right: 60px solid transparent;
+            border-top: 60px solid #F4B915;
+            border-left: 60px solid #F4B915;
+            border-bottom: 60px solid #F4B915;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 60px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+
+        .mouse_open::after {
+            content: '';
+            display: block;
+            background-color: #F4B915;
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            translate: -100% -70%;
+            transition: .1s;
+            border-radius: 100%;
+        }
+
+
+        .eyes {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 100%;
+            position: absolute;
+            bottom: 30px;
+            left: 0px;
+            z-index: 1;
+        }
+    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contener">
+        <div class="d22">
+            <div class="eyes"></div>
+
+        </div>
+        <div class="modal_bg">
+            <div class="modal_win">
+                <h1>ВЫ ПРОШЛИ ИГРУ</h1>
+                <h3>x</h3>
+                <div class="priz">
+                    <h2>Ваш приз</h2>
+                    <img src="img/macbook-pro-otrazhenie-noutbuk.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal_bg_two">
+            <div class="modal_over">
+                <h1>ВЫ НЕ ПРОШЛИ ИГРУ</h1>
+                <h5>x</h5>
+                <div class="priz_loser">
+                    <h2>loser</h2>
+                    <img src="img/1672394754_new_preview_1586451705_22-p-negri-32.jpg" alt="">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="time_block">
+            <div class="minet">
+                <p>00:00</p>
+                <p id="p">5 шт</p>
+            </div>
+        </div>
+
+
+        <div id="red" class="food"></div>
+        <div id="red" class="food_two"></div>
+        <div id="red" class="food_three"></div>
+        <div id="red" class="food_for"></div>
+        <div id="red" class="food_five"></div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
